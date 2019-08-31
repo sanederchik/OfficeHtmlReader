@@ -19,7 +19,7 @@
                     '               <p> After loading a web-element into this container, it will automatically open anywhere without necessity of loading the web-element again.</p>  ' +
                     '               <br>  ' +
                     '               <p> Created by <strong> sanederchik </strong> </p>  ' +
-                    '               <p> More on my <a href="https://github.com/sanederchik"> github page </a> </p>  '  + 
+                    '               <p> More on my <a href="https://github.com/sanederchik/OfficeHtmlReader"> github page </a> </p>  '  + 
                         '           </div>  '  +
                             '   		  ' +
                             '      </div>  '; 
