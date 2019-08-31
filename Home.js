@@ -6,7 +6,7 @@
         // Office is ready
         $(document).ready(function () {
             try {
-                var t1 = Office.context.document.settings.get('elementHTML');
+
                 var t2 = '       <div id="start-menu">  ' +
                     '           <button class="btn" id="webBtn">Website</button>  ' +
                     '           <button class="btn" id="fileBtn">Local file</button>  ' +
@@ -19,10 +19,12 @@
                     '               <p> After loading a web-element into this container, it will automatically open anywhere without necessity of loading the web-element again.</p>  ' +
                     '               <br>  ' +
                     '               <p> Created by <strong> sanederchik </strong> </p>  ' +
-                    '               <p> More on my <a href="https://github.com/sanederchik/OfficeHtmlReader"> github page </a> </p>  '  + 
-                        '           </div>  '  +
-                            '   		  ' +
-                            '      </div>  '; 
+                    '               <p> More on my <a href="https://github.com/sanederchik/OfficeHtmlReader"> github page </a> </p>  ' +
+                    '           </div>  ' +
+                    '   		  ' +
+                    '      </div>  '; 
+                var t1 = Office.context.document.settings.get('elementHTML');
+           
 
 
                 if (t1 == null) {
@@ -116,7 +118,7 @@ function insURL() {
         Office.context.document.settings.saveAsync();
 
     }).fail(function (jqXHR, textStatus, errorThrown) {
-        $("body").html("Error. File is not loaded");
+        $("body").html("This website could not be loaded due to several problems. Make sure your url contains a 'https' prefix. If it does not help, try using proxy or other services to avoid CORS restrictions");
     });
 
 }
