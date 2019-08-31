@@ -1,4 +1,8 @@
-﻿input[type=file] {
+﻿body {
+    background-color: rgb(250,250,250);
+}
+
+input[type=file] {
     
     padding: 8px 16px;
     text-decoration: none;
@@ -7,26 +11,34 @@
 }
 
 .btn {
-    -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     background-color: white;
-    color: blue;
+    color: darkblue;
     font: bold 24px Helvetica, Arial;
     border:solid;
-    border-color: blue;
+    border-color: darkblue;
     border-radius: 10px;
     margin-left: 5px;
 }
 
 .btn:hover {
     color: white;
-    background-color: blue;
+    background-color: darkblue;
 
 }
 
-.iframe {
+p {
+    color: #f8f8f8;
+    font-family: 'Raleway',sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 0 0 0 0;
+}
 
-    height: 700px;
-    width: 100%;
-
+#start-info {
+    background-color: darkblue;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 10px;
 }
