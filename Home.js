@@ -92,7 +92,7 @@ function handleFileSelect(f) {
 
 function insURL() {
 
-    	var _ = document.getElementById('input');
+    	var _ = document.getElementById('web');
     	$("body").html("Loading...");
 
 	if (_.value.toString() == ''){
