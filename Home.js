@@ -92,33 +92,19 @@ function handleFileSelect(f) {
 
 function insURL() {
 
-    var url = document.getElementById("web").value;
+    	var _ = document.getElementById('input');
+    	$("body").html("Loading...");
 
-    $("body").html("Loading...");
+	if (_.value.toString() == ''){
 
-    $.ajax({
-        url: url,
-        type: "GET",
-        dataType: "html",
-        headers: {
-            'X-Requested-With': 'XMLHttpRequest'
-        }
-    }).done(function (data) {
-        $("body").html(data);
-        $("body link").each(function () {
-            var cssLink = $(this).attr('href');
-            $("body head").append('  <link href="' + cssLink + '" rel="stylesheet" />');
-        });
-        $("body script").each(function () {
-            var jsLink = $(this).attr('src');
-            $("body head").append('<script type="text/javascript" src="' + jsLink + '"></script>')
-        });
+	alert('Пустое значение!');
+	} else {
 
-        Office.context.document.settings.set('elementHTML', $('body').html());
-        Office.context.document.settings.saveAsync();
+	document.body.innerHTML = `
 
-    }).fail(function (jqXHR, textStatus, errorThrown) {
-        $("body").html("This website could not be loaded due to several problems. Make sure your url contains a 'https' prefix. If it does not help, try using proxy or other services to avoid CORS restrictions");
-    });
+	<iframe src = "${_.value}" width="100%" height="100%" frameBorder="0"><Браузер не поддерживает iframe</iframe>
+
+	`;
+	}
 
 }
