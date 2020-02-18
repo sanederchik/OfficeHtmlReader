@@ -94,6 +94,7 @@ function insURL() {
 
     	var _ = document.getElementById('web');
     	$("body").html("Loading...");
+	//
 
 	if (_.value.toString() == ''){
 
